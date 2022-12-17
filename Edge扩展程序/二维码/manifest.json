@@ -1,54 +1,46 @@
 {
     "name": "二维码",
-    "description": "快速生成网址二维码，新增“关灯”功能",
+    "description": "快速生成网址二维码，新增关灯、CSDN扩展css",
     "manifest_version": 2,
-    "version": "0.0.0.2",
-    "icons":{
+    "version": "0.0.0.3",
+    "icons": {
         "16": "icons/16x16.png",
         "32": "icons/32x32.png",
         "48": "icons/48x48.png",
         "128": "icons/128x128.png"
     },
-    "browser_action":{
+    "browser_action": {
         "default_popup": "popup/code.html"
     },
     "content_scripts": [
         {
             "js": [
-                "source/import.js"
-            ],
-            "matches":[
-                "<all_urls>"
-            ],
-            "css":[],
-            "run_at": "document_start"
-        },
-        {
-            "js": [
+                "source/import.js",
                 "source/lamp.js"
             ],
-            "matches":[
+            "matches": [
                 "<all_urls>"
             ],
+            "css": [],
             "run_at": "document_start"
         },
         {
-            "js": [
+            "js":[
                 "source/conver.js"
             ],
-            "matches":[
+            "matches": [
                 "<all_urls>"
             ],
             "run_at": "document_end"
         }
     ],
-    "permissions":[
+    "permissions": [
         "activeTab",
         "storage",
         "http://*/*",
         "https://*/*"
     ],
-    "web_accessible_resources":[
+    "web_accessible_resources": [
         "source/css/*"
     ],
     "default_locale": "zh_CN"
