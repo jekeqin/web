@@ -1,7 +1,6 @@
 
 // 注入网页的js，响应扩展发送过来的事件
 
-
 function _lamp(tabId){
     var lampId = "import.lamp";
     var css = chrome.extension.getURL("/source/css/lamp.css");
@@ -52,7 +51,7 @@ try{
 
 }
 
-
+// 接收 popup 发送的消息
 chrome.runtime.onMessage.addListener(function(request, sender, callback) {
     // 注入到网页的JS，接收到请求之后，执行相应操作
     //console.log(request);

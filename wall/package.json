@@ -1,0 +1,11 @@
+{
+    "name": "wall",
+    "version": "1.0.0",
+    "description": "desktop wallpaper",
+    "main": "electron.js",
+    "scripts": {
+        "test": "electron ."
+    },
+    "author": "Jekeqin",
+    "license": "ISC"
+}

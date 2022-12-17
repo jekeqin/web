@@ -1,0 +1,11 @@
+{
+  "subPackageBuildType": "shared",
+  "pages": [
+    "pages/index/index",
+    "pages/tabbar/weather",
+    "pages/tabbar/tools"
+  ],
+  "window": {
+    "defaultTitle": "My App"
+  }
+}

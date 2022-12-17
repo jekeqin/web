@@ -47,15 +47,16 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
 
 var lamp = document.getElementById("lamp");
 if( lamp ){
-    console.log("qrcode.import.js",chrome.i18n.getMessage("button"));
+    console.debug("qrcode.import.js",chrome.i18n.getMessage("button"));
 
     chrome.storage.sync.get({closeLamp:false}, function(obj){
-        console.log(obj);
+        console.debug(obj);
         lamp.checked = obj.closeLamp;
     });
     lamp.addEventListener('change', function(){
         chrome.storage.sync.set({closeLamp:lamp.checked});
         chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+            // 发送 popup 消息
             chrome.tabs.sendMessage(tabs[0].id, {event:'lamp', tabId:tabs[0].id});
         });
     });
