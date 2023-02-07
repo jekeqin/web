@@ -1,0 +1,34 @@
+html{
+    background-color:black !important;
+    background:black !important;
+}
+body{
+    background-color:black !important;
+    background:black !important;
+}
+
+body>*{
+    background-color:rgba(255,255,255,0.3) !important;
+}
+body>* *{
+    background-color:transparent !important;
+}
+/*
+div{
+    background-color:rgba(255,255,255,0.2) !important;
+}
+tr, th, td, p, ul, img{
+    background-color:transparent !important;
+}
+*/
+input, textarea{
+    background-color:black !important;
+    color:white !important;
+}
+
+a, button{
+    color:#FF8C00 !important;
+}
+a:visited{
+    color:#00BFFF !important;
+}

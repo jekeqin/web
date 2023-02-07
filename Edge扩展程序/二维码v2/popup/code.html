@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>二维码</title>
+<script type="text/javascript" src="/source/qrcode.js"></script>
+<style type="text/css">
+html,body{margin:0px;padding:0px;width:300px;height:380px;}
+body{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;}
+#code{margin:40px 0px 30px;box-shadow:0px 0px 2px 2px #ccc;}
+#url{width:260px;height:80px;font-size:14px;padding:5px;resize:none;border:1px solid #ccc;border-radius:3;outline:none;}
+label{display:flex;justify-content:center;align-items:center;margin-top:10px;}
+</style>
+</head>
+<body>
+
+<div id="code"></div>
+
+<textarea id="url"></textarea>
+
+<label>
+    <input type="checkbox" id="lamp"/>
+    关灯
+</label>
+
+<!--
+扩展内部的 js 必须单独使用js文件引用，否则不生效
+-->
+<script type="text/javascript" src="/source/site.js"></script>
+</body>
+</html>
